@@ -10,12 +10,16 @@ using System.Windows.Forms;
 
 namespace CalculadoraSwitchCase
 {
-    public partial class Form1 : Form
+    public partial class Calculadora : Form
     {
-        public Form1()
+        public Calculadora()
         {
             InitializeComponent();
         }
 
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+
+        }
     }
 }
