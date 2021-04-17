@@ -35,11 +35,11 @@ namespace CalculadoraSwitchCase
             this.lbl_valor2 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.gb_operadores = new System.Windows.Forms.GroupBox();
+            this.rb_porcento = new System.Windows.Forms.RadioButton();
             this.rb_dividir = new System.Windows.Forms.RadioButton();
             this.rb_multiplicar = new System.Windows.Forms.RadioButton();
             this.rb_subtrair = new System.Windows.Forms.RadioButton();
             this.rb_somar = new System.Windows.Forms.RadioButton();
-            this.rb_porcento = new System.Windows.Forms.RadioButton();
             this.btn_calcular = new System.Windows.Forms.Button();
             this.txtb_resuldado = new System.Windows.Forms.TextBox();
             this.lbl_resultado = new System.Windows.Forms.Label();
@@ -82,7 +82,6 @@ namespace CalculadoraSwitchCase
             // 
             // backgroundWorker1
             // 
-            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             // 
             // gb_operadores
             // 
@@ -98,6 +97,17 @@ namespace CalculadoraSwitchCase
             this.gb_operadores.TabIndex = 5;
             this.gb_operadores.TabStop = false;
             this.gb_operadores.Text = "Selecione a Operação";
+            // 
+            // rb_porcento
+            // 
+            this.rb_porcento.AutoSize = true;
+            this.rb_porcento.Location = new System.Drawing.Point(119, 77);
+            this.rb_porcento.Name = "rb_porcento";
+            this.rb_porcento.Size = new System.Drawing.Size(123, 19);
+            this.rb_porcento.TabIndex = 4;
+            this.rb_porcento.TabStop = true;
+            this.rb_porcento.Text = "Porcentagem ( % )";
+            this.rb_porcento.UseVisualStyleBackColor = true;
             // 
             // rb_dividir
             // 
@@ -143,17 +153,6 @@ namespace CalculadoraSwitchCase
             this.rb_somar.Text = "Somar ( + )";
             this.rb_somar.UseVisualStyleBackColor = true;
             // 
-            // rb_porcento
-            // 
-            this.rb_porcento.AutoSize = true;
-            this.rb_porcento.Location = new System.Drawing.Point(119, 77);
-            this.rb_porcento.Name = "rb_porcento";
-            this.rb_porcento.Size = new System.Drawing.Size(123, 19);
-            this.rb_porcento.TabIndex = 4;
-            this.rb_porcento.TabStop = true;
-            this.rb_porcento.Text = "Porcentagem ( % )";
-            this.rb_porcento.UseVisualStyleBackColor = true;
-            // 
             // btn_calcular
             // 
             this.btn_calcular.Location = new System.Drawing.Point(38, 314);
@@ -162,6 +161,7 @@ namespace CalculadoraSwitchCase
             this.btn_calcular.TabIndex = 6;
             this.btn_calcular.Text = "Calcular";
             this.btn_calcular.UseVisualStyleBackColor = true;
+            this.btn_calcular.Click += new System.EventHandler(this.btn_calcular_Click);
             // 
             // txtb_resuldado
             // 
